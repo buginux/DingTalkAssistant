@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2753E271F2A33D400C2293B /* WBGlobalSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2753E1E1F2A33D400C2293B /* WBGlobalSettingViewController.m */; };
+		A2753E281F2A33D400C2293B /* WBAssistantManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2753E201F2A33D400C2293B /* WBAssistantManager.m */; };
+		A2753E291F2A33D400C2293B /* WBMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2753E221F2A33D400C2293B /* WBMenuViewController.m */; };
+		A2753E2A1F2A33D400C2293B /* WBWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A2753E231F2A33D400C2293B /* WBWindow.m */; };
+		A2753E2B1F2A33D400C2293B /* WBMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2753E251F2A33D400C2293B /* WBMenuView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A21AED281F2A2AFD0004944A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A21AED2A1F2A2AFD0004944A /* libDingTalkAssistant.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDingTalkAssistant.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2753E1D1F2A33D400C2293B /* WBAssistantManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBAssistantManager.h; path = ../../../MenuWindow/WBAssistantManager.h; sourceTree = "<group>"; };
+		A2753E1E1F2A33D400C2293B /* WBGlobalSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBGlobalSettingViewController.m; path = ../../../MenuWindow/WBGlobalSettingViewController.m; sourceTree = "<group>"; };
+		A2753E1F1F2A33D400C2293B /* WBMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBMenuViewController.h; path = ../../../MenuWindow/WBMenuViewController.h; sourceTree = "<group>"; };
+		A2753E201F2A33D400C2293B /* WBAssistantManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBAssistantManager.m; path = ../../../MenuWindow/WBAssistantManager.m; sourceTree = "<group>"; };
+		A2753E211F2A33D400C2293B /* WBGlobalSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBGlobalSettingViewController.h; path = ../../../MenuWindow/WBGlobalSettingViewController.h; sourceTree = "<group>"; };
+		A2753E221F2A33D400C2293B /* WBMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBMenuViewController.m; path = ../../../MenuWindow/WBMenuViewController.m; sourceTree = "<group>"; };
+		A2753E231F2A33D400C2293B /* WBWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBWindow.m; path = ../../../MenuWindow/WBWindow.m; sourceTree = "<group>"; };
+		A2753E241F2A33D400C2293B /* WBWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBWindow.h; path = ../../../MenuWindow/WBWindow.h; sourceTree = "<group>"; };
+		A2753E251F2A33D400C2293B /* WBMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBMenuView.m; path = ../../../MenuWindow/WBMenuView.m; sourceTree = "<group>"; };
+		A2753E261F2A33D400C2293B /* WBMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBMenuView.h; path = ../../../MenuWindow/WBMenuView.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A21AED271F2A2AFD0004944A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A21AED211F2A2AFD0004944A = {
+			isa = PBXGroup;
+			children = (
+				A21AED2C1F2A2AFD0004944A /* DingTalkAssistant */,
+				A21AED2B1F2A2AFD0004944A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A21AED2B1F2A2AFD0004944A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A21AED2A1F2A2AFD0004944A /* libDingTalkAssistant.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A21AED2C1F2A2AFD0004944A /* DingTalkAssistant */ = {
+			isa = PBXGroup;
+			children = (
+				A2753E1C1F2A33C800C2293B /* MenuWindow */,
+			);
+			path = DingTalkAssistant;
+			sourceTree = "<group>";
+		};
+		A2753E1C1F2A33C800C2293B /* MenuWindow */ = {
+			isa = PBXGroup;
+			children = (
+				A2753E1D1F2A33D400C2293B /* WBAssistantManager.h */,
+				A2753E201F2A33D400C2293B /* WBAssistantManager.m */,
+				A2753E211F2A33D400C2293B /* WBGlobalSettingViewController.h */,
+				A2753E1E1F2A33D400C2293B /* WBGlobalSettingViewController.m */,
+				A2753E261F2A33D400C2293B /* WBMenuView.h */,
+				A2753E251F2A33D400C2293B /* WBMenuView.m */,
+				A2753E1F1F2A33D400C2293B /* WBMenuViewController.h */,
+				A2753E221F2A33D400C2293B /* WBMenuViewController.m */,
+				A2753E241F2A33D400C2293B /* WBWindow.h */,
+				A2753E231F2A33D400C2293B /* WBWindow.m */,
+			);
+			path = MenuWindow;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A21AED291F2A2AFD0004944A /* DingTalkAssistant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A21AED331F2A2AFD0004944A /* Build configuration list for PBXNativeTarget "DingTalkAssistant" */;
+			buildPhases = (
+				A21AED261F2A2AFD0004944A /* Sources */,
+				A21AED271F2A2AFD0004944A /* Frameworks */,
+				A21AED281F2A2AFD0004944A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DingTalkAssistant;
+			productName = DingTalkAssistant;
+			productReference = A21AED2A1F2A2AFD0004944A /* libDingTalkAssistant.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A21AED221F2A2AFD0004944A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = buginux;
+				TargetAttributes = {
+					A21AED291F2A2AFD0004944A = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = AMCXGTYG4X;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A21AED251F2A2AFD0004944A /* Build configuration list for PBXProject "DingTalkAssistant" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A21AED211F2A2AFD0004944A;
+			productRefGroup = A21AED2B1F2A2AFD0004944A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A21AED291F2A2AFD0004944A /* DingTalkAssistant */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A21AED261F2A2AFD0004944A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2753E291F2A33D400C2293B /* WBMenuViewController.m in Sources */,
+				A2753E2B1F2A33D400C2293B /* WBMenuView.m in Sources */,
+				A2753E271F2A33D400C2293B /* WBGlobalSettingViewController.m in Sources */,
+				A2753E2A1F2A33D400C2293B /* WBWindow.m in Sources */,
+				A2753E281F2A33D400C2293B /* WBAssistantManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A21AED311F2A2AFD0004944A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A21AED321F2A2AFD0004944A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A21AED341F2A2AFD0004944A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = AMCXGTYG4X;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A21AED351F2A2AFD0004944A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = AMCXGTYG4X;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A21AED251F2A2AFD0004944A /* Build configuration list for PBXProject "DingTalkAssistant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A21AED311F2A2AFD0004944A /* Debug */,
+				A21AED321F2A2AFD0004944A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A21AED331F2A2AFD0004944A /* Build configuration list for PBXNativeTarget "DingTalkAssistant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A21AED341F2A2AFD0004944A /* Debug */,
+				A21AED351F2A2AFD0004944A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A21AED221F2A2AFD0004944A /* Project object */;
+}
