@@ -4,7 +4,7 @@ THEOS_DEVICE_PORT = 2222
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = DingTalkAssistant
-DingTalkAssistant_FILES = $(wildcard MenuWindow/*.m) Tweak.xm
+DingTalkAssistant_FILES = $(wildcard MenuWindow/*.m) $(wildcard WIFI/*.m) $(wildcard GPS/*.m) Tweak.xm
 DingTalkAssistant_FRAMEWORKS = SystemConfiguration
 
 include $(THEOS_MAKE_PATH)/tweak.mk

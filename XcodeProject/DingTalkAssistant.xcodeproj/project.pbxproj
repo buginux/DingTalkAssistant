@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A2753E271F2A33D400C2293B /* WBGlobalSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2753E1E1F2A33D400C2293B /* WBGlobalSettingViewController.m */; };
-		A2753E281F2A33D400C2293B /* WBAssistantManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2753E201F2A33D400C2293B /* WBAssistantManager.m */; };
-		A2753E291F2A33D400C2293B /* WBMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2753E221F2A33D400C2293B /* WBMenuViewController.m */; };
-		A2753E2A1F2A33D400C2293B /* WBWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A2753E231F2A33D400C2293B /* WBWindow.m */; };
-		A2753E2B1F2A33D400C2293B /* WBMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2753E251F2A33D400C2293B /* WBMenuView.m */; };
+		A29D798F1F2B6E8700595835 /* WBWifiListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D798E1F2B6E8700595835 /* WBWifiListViewController.m */; };
+		A29D79961F2B757000595835 /* WBGPSPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D79951F2B757000595835 /* WBGPSPickerViewController.m */; };
+		A29D79A41F2B787500595835 /* WBAssistantManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D799B1F2B787500595835 /* WBAssistantManager.m */; };
+		A29D79A51F2B787500595835 /* WBGlobalSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D799D1F2B787500595835 /* WBGlobalSettingViewController.m */; };
+		A29D79A61F2B787500595835 /* WBMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D799F1F2B787500595835 /* WBMenuView.m */; };
+		A29D79A71F2B787500595835 /* WBMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D79A11F2B787500595835 /* WBMenuViewController.m */; };
+		A29D79A81F2B787500595835 /* WBWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D79A31F2B787500595835 /* WBWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,16 +30,20 @@
 
 /* Begin PBXFileReference section */
 		A21AED2A1F2A2AFD0004944A /* libDingTalkAssistant.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDingTalkAssistant.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2753E1D1F2A33D400C2293B /* WBAssistantManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBAssistantManager.h; path = ../../../MenuWindow/WBAssistantManager.h; sourceTree = "<group>"; };
-		A2753E1E1F2A33D400C2293B /* WBGlobalSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBGlobalSettingViewController.m; path = ../../../MenuWindow/WBGlobalSettingViewController.m; sourceTree = "<group>"; };
-		A2753E1F1F2A33D400C2293B /* WBMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBMenuViewController.h; path = ../../../MenuWindow/WBMenuViewController.h; sourceTree = "<group>"; };
-		A2753E201F2A33D400C2293B /* WBAssistantManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBAssistantManager.m; path = ../../../MenuWindow/WBAssistantManager.m; sourceTree = "<group>"; };
-		A2753E211F2A33D400C2293B /* WBGlobalSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBGlobalSettingViewController.h; path = ../../../MenuWindow/WBGlobalSettingViewController.h; sourceTree = "<group>"; };
-		A2753E221F2A33D400C2293B /* WBMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBMenuViewController.m; path = ../../../MenuWindow/WBMenuViewController.m; sourceTree = "<group>"; };
-		A2753E231F2A33D400C2293B /* WBWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBWindow.m; path = ../../../MenuWindow/WBWindow.m; sourceTree = "<group>"; };
-		A2753E241F2A33D400C2293B /* WBWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBWindow.h; path = ../../../MenuWindow/WBWindow.h; sourceTree = "<group>"; };
-		A2753E251F2A33D400C2293B /* WBMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBMenuView.m; path = ../../../MenuWindow/WBMenuView.m; sourceTree = "<group>"; };
-		A2753E261F2A33D400C2293B /* WBMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBMenuView.h; path = ../../../MenuWindow/WBMenuView.h; sourceTree = "<group>"; };
+		A29D798D1F2B6E8700595835 /* WBWifiListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBWifiListViewController.h; path = ../../WIFI/WBWifiListViewController.h; sourceTree = "<group>"; };
+		A29D798E1F2B6E8700595835 /* WBWifiListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBWifiListViewController.m; path = ../../WIFI/WBWifiListViewController.m; sourceTree = "<group>"; };
+		A29D79941F2B757000595835 /* WBGPSPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBGPSPickerViewController.h; path = ../../GPS/WBGPSPickerViewController.h; sourceTree = "<group>"; };
+		A29D79951F2B757000595835 /* WBGPSPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBGPSPickerViewController.m; path = ../../GPS/WBGPSPickerViewController.m; sourceTree = "<group>"; };
+		A29D799A1F2B787500595835 /* WBAssistantManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBAssistantManager.h; path = ../../../MenuWindow/WBAssistantManager.h; sourceTree = "<group>"; };
+		A29D799B1F2B787500595835 /* WBAssistantManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBAssistantManager.m; path = ../../../MenuWindow/WBAssistantManager.m; sourceTree = "<group>"; };
+		A29D799C1F2B787500595835 /* WBGlobalSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBGlobalSettingViewController.h; path = ../../../MenuWindow/WBGlobalSettingViewController.h; sourceTree = "<group>"; };
+		A29D799D1F2B787500595835 /* WBGlobalSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBGlobalSettingViewController.m; path = ../../../MenuWindow/WBGlobalSettingViewController.m; sourceTree = "<group>"; };
+		A29D799E1F2B787500595835 /* WBMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBMenuView.h; path = ../../../MenuWindow/WBMenuView.h; sourceTree = "<group>"; };
+		A29D799F1F2B787500595835 /* WBMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBMenuView.m; path = ../../../MenuWindow/WBMenuView.m; sourceTree = "<group>"; };
+		A29D79A01F2B787500595835 /* WBMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBMenuViewController.h; path = ../../../MenuWindow/WBMenuViewController.h; sourceTree = "<group>"; };
+		A29D79A11F2B787500595835 /* WBMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBMenuViewController.m; path = ../../../MenuWindow/WBMenuViewController.m; sourceTree = "<group>"; };
+		A29D79A21F2B787500595835 /* WBWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBWindow.h; path = ../../../MenuWindow/WBWindow.h; sourceTree = "<group>"; };
+		A29D79A31F2B787500595835 /* WBWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBWindow.m; path = ../../../MenuWindow/WBWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,8 @@
 		A21AED2C1F2A2AFD0004944A /* DingTalkAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				A29D79901F2B750C00595835 /* GPS */,
+				A29D798C1F2B6E5A00595835 /* WIFI */,
 				A2753E1C1F2A33C800C2293B /* MenuWindow */,
 			);
 			path = DingTalkAssistant;
@@ -78,18 +86,36 @@
 		A2753E1C1F2A33C800C2293B /* MenuWindow */ = {
 			isa = PBXGroup;
 			children = (
-				A2753E1D1F2A33D400C2293B /* WBAssistantManager.h */,
-				A2753E201F2A33D400C2293B /* WBAssistantManager.m */,
-				A2753E211F2A33D400C2293B /* WBGlobalSettingViewController.h */,
-				A2753E1E1F2A33D400C2293B /* WBGlobalSettingViewController.m */,
-				A2753E261F2A33D400C2293B /* WBMenuView.h */,
-				A2753E251F2A33D400C2293B /* WBMenuView.m */,
-				A2753E1F1F2A33D400C2293B /* WBMenuViewController.h */,
-				A2753E221F2A33D400C2293B /* WBMenuViewController.m */,
-				A2753E241F2A33D400C2293B /* WBWindow.h */,
-				A2753E231F2A33D400C2293B /* WBWindow.m */,
+				A29D799A1F2B787500595835 /* WBAssistantManager.h */,
+				A29D799B1F2B787500595835 /* WBAssistantManager.m */,
+				A29D799C1F2B787500595835 /* WBGlobalSettingViewController.h */,
+				A29D799D1F2B787500595835 /* WBGlobalSettingViewController.m */,
+				A29D799E1F2B787500595835 /* WBMenuView.h */,
+				A29D799F1F2B787500595835 /* WBMenuView.m */,
+				A29D79A01F2B787500595835 /* WBMenuViewController.h */,
+				A29D79A11F2B787500595835 /* WBMenuViewController.m */,
+				A29D79A21F2B787500595835 /* WBWindow.h */,
+				A29D79A31F2B787500595835 /* WBWindow.m */,
 			);
 			path = MenuWindow;
+			sourceTree = "<group>";
+		};
+		A29D798C1F2B6E5A00595835 /* WIFI */ = {
+			isa = PBXGroup;
+			children = (
+				A29D798D1F2B6E8700595835 /* WBWifiListViewController.h */,
+				A29D798E1F2B6E8700595835 /* WBWifiListViewController.m */,
+			);
+			name = WIFI;
+			sourceTree = "<group>";
+		};
+		A29D79901F2B750C00595835 /* GPS */ = {
+			isa = PBXGroup;
+			children = (
+				A29D79941F2B757000595835 /* WBGPSPickerViewController.h */,
+				A29D79951F2B757000595835 /* WBGPSPickerViewController.m */,
+			);
+			name = GPS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,11 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2753E291F2A33D400C2293B /* WBMenuViewController.m in Sources */,
-				A2753E2B1F2A33D400C2293B /* WBMenuView.m in Sources */,
-				A2753E271F2A33D400C2293B /* WBGlobalSettingViewController.m in Sources */,
-				A2753E2A1F2A33D400C2293B /* WBWindow.m in Sources */,
-				A2753E281F2A33D400C2293B /* WBAssistantManager.m in Sources */,
+				A29D79A71F2B787500595835 /* WBMenuViewController.m in Sources */,
+				A29D79A41F2B787500595835 /* WBAssistantManager.m in Sources */,
+				A29D79A61F2B787500595835 /* WBMenuView.m in Sources */,
+				A29D79A51F2B787500595835 /* WBGlobalSettingViewController.m in Sources */,
+				A29D79961F2B757000595835 /* WBGPSPickerViewController.m in Sources */,
+				A29D79A81F2B787500595835 /* WBWindow.m in Sources */,
+				A29D798F1F2B6E8700595835 /* WBWifiListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

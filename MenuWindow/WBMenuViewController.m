@@ -10,7 +10,7 @@
 #import "WBGlobalSettingViewController.h"
 #import "WBMenuView.h"
 
-@interface WBMenuViewController ()
+@interface WBMenuViewController () <WBGlobalSettingViewControllerDelegate>
 
 @property (nonatomic, strong) WBMenuView *menu;
 
@@ -116,8 +116,8 @@
     } else {
         void (^presentBlock)() = ^{
             WBGlobalSettingViewController *settingViewController = [[WBGlobalSettingViewController alloc] init];
-//            globalsViewController.delegate = self;
-//            [WBGlobalSettingViewController setApplicationWindow:[[UIApplication sharedApplication] keyWindow]];
+            settingViewController.delegate = self;
+            [WBGlobalSettingViewController setApplicationWindow:[[UIApplication sharedApplication] keyWindow]];
             UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:settingViewController];
             [self makeKeyAndPresentViewController:navigationController animated:YES completion:nil];
         };
@@ -149,6 +149,13 @@
     
     return shouldReceiveTouch;
 }
+
+#pragma mark - WBGlobalSettingViewControllerDelegate
+
+- (void)globalSettingViewControllerDidFinish:(WBGlobalSettingViewController *)controller {
+    [self resignKeyAndDismissViewControllerAnimated:YES completion:nil];
+}
+
 
 #pragma mark - Modal Presentation and Window Management
 
