@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WBWifiListViewController : UIViewController
+@interface WBWifiListViewController : UITableViewController
 
 @end
