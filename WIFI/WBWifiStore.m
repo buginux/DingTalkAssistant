@@ -46,7 +46,7 @@
         NSString *interfaceName = [interfaces firstObject];
         
         CFDictionaryRef info = CNCopyCurrentNetworkInfo((__bridge CFStringRef)interfaceName);
-        NSDictionary *dictionary = (__bridge NSDictionary *)info;
+        NSDictionary *dictionary = (__bridge NSDictionary *)(info);
         
         if (dictionary) {
             WBWifiModel *wifi = [[WBWifiModel alloc] initWithInterfaceName:interfaceName dictionary:dictionary];

@@ -9,11 +9,6 @@
 /* Begin PBXBuildFile section */
 		A29D798F1F2B6E8700595835 /* WBWifiListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D798E1F2B6E8700595835 /* WBWifiListViewController.m */; };
 		A29D79961F2B757000595835 /* WBGPSPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D79951F2B757000595835 /* WBGPSPickerViewController.m */; };
-		A29D79A41F2B787500595835 /* WBAssistantManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D799B1F2B787500595835 /* WBAssistantManager.m */; };
-		A29D79A51F2B787500595835 /* WBGlobalSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D799D1F2B787500595835 /* WBGlobalSettingViewController.m */; };
-		A29D79A61F2B787500595835 /* WBMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D799F1F2B787500595835 /* WBMenuView.m */; };
-		A29D79A71F2B787500595835 /* WBMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D79A11F2B787500595835 /* WBMenuViewController.m */; };
-		A29D79A81F2B787500595835 /* WBWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D79A31F2B787500595835 /* WBWindow.m */; };
 		A29D79B11F2C5DBD00595835 /* WBWifiStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D79B01F2C5DBD00595835 /* WBWifiStore.m */; };
 		A29D79B41F2C5DCF00595835 /* WBWifiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D79B31F2C5DCF00595835 /* WBWifiModel.m */; };
 /* End PBXBuildFile section */
@@ -36,16 +31,6 @@
 		A29D798E1F2B6E8700595835 /* WBWifiListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBWifiListViewController.m; path = ../../WIFI/WBWifiListViewController.m; sourceTree = "<group>"; };
 		A29D79941F2B757000595835 /* WBGPSPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBGPSPickerViewController.h; path = ../../GPS/WBGPSPickerViewController.h; sourceTree = "<group>"; };
 		A29D79951F2B757000595835 /* WBGPSPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBGPSPickerViewController.m; path = ../../GPS/WBGPSPickerViewController.m; sourceTree = "<group>"; };
-		A29D799A1F2B787500595835 /* WBAssistantManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBAssistantManager.h; path = ../../../MenuWindow/WBAssistantManager.h; sourceTree = "<group>"; };
-		A29D799B1F2B787500595835 /* WBAssistantManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBAssistantManager.m; path = ../../../MenuWindow/WBAssistantManager.m; sourceTree = "<group>"; };
-		A29D799C1F2B787500595835 /* WBGlobalSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBGlobalSettingViewController.h; path = ../../../MenuWindow/WBGlobalSettingViewController.h; sourceTree = "<group>"; };
-		A29D799D1F2B787500595835 /* WBGlobalSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBGlobalSettingViewController.m; path = ../../../MenuWindow/WBGlobalSettingViewController.m; sourceTree = "<group>"; };
-		A29D799E1F2B787500595835 /* WBMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBMenuView.h; path = ../../../MenuWindow/WBMenuView.h; sourceTree = "<group>"; };
-		A29D799F1F2B787500595835 /* WBMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBMenuView.m; path = ../../../MenuWindow/WBMenuView.m; sourceTree = "<group>"; };
-		A29D79A01F2B787500595835 /* WBMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBMenuViewController.h; path = ../../../MenuWindow/WBMenuViewController.h; sourceTree = "<group>"; };
-		A29D79A11F2B787500595835 /* WBMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBMenuViewController.m; path = ../../../MenuWindow/WBMenuViewController.m; sourceTree = "<group>"; };
-		A29D79A21F2B787500595835 /* WBWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBWindow.h; path = ../../../MenuWindow/WBWindow.h; sourceTree = "<group>"; };
-		A29D79A31F2B787500595835 /* WBWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBWindow.m; path = ../../../MenuWindow/WBWindow.m; sourceTree = "<group>"; };
 		A29D79AF1F2C5DBD00595835 /* WBWifiStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBWifiStore.h; path = ../../WIFI/WBWifiStore.h; sourceTree = "<group>"; };
 		A29D79B01F2C5DBD00595835 /* WBWifiStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBWifiStore.m; path = ../../WIFI/WBWifiStore.m; sourceTree = "<group>"; };
 		A29D79B21F2C5DCF00595835 /* WBWifiModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBWifiModel.h; path = ../../WIFI/WBWifiModel.h; sourceTree = "<group>"; };
@@ -92,16 +77,6 @@
 		A2753E1C1F2A33C800C2293B /* MenuWindow */ = {
 			isa = PBXGroup;
 			children = (
-				A29D799A1F2B787500595835 /* WBAssistantManager.h */,
-				A29D799B1F2B787500595835 /* WBAssistantManager.m */,
-				A29D799C1F2B787500595835 /* WBGlobalSettingViewController.h */,
-				A29D799D1F2B787500595835 /* WBGlobalSettingViewController.m */,
-				A29D799E1F2B787500595835 /* WBMenuView.h */,
-				A29D799F1F2B787500595835 /* WBMenuView.m */,
-				A29D79A01F2B787500595835 /* WBMenuViewController.h */,
-				A29D79A11F2B787500595835 /* WBMenuViewController.m */,
-				A29D79A21F2B787500595835 /* WBWindow.h */,
-				A29D79A31F2B787500595835 /* WBWindow.m */,
 			);
 			path = MenuWindow;
 			sourceTree = "<group>";
@@ -186,13 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A29D79A71F2B787500595835 /* WBMenuViewController.m in Sources */,
-				A29D79A41F2B787500595835 /* WBAssistantManager.m in Sources */,
-				A29D79A61F2B787500595835 /* WBMenuView.m in Sources */,
-				A29D79A51F2B787500595835 /* WBGlobalSettingViewController.m in Sources */,
 				A29D79961F2B757000595835 /* WBGPSPickerViewController.m in Sources */,
 				A29D79B11F2C5DBD00595835 /* WBWifiStore.m in Sources */,
-				A29D79A81F2B787500595835 /* WBWindow.m in Sources */,
 				A29D79B41F2C5DCF00595835 /* WBWifiModel.m in Sources */,
 				A29D798F1F2B6E8700595835 /* WBWifiListViewController.m in Sources */,
 			);

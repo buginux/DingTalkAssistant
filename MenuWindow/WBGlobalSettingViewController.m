@@ -12,18 +12,11 @@
 
 static UIWindow *s_applicationWindow = nil;
 
-@interface WBGlobalSettingViewController ()
-
-@property (nonatomic, strong) NSDictionary *entries;
-
-@end
-
 @implementation WBGlobalSettingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self initEntries];
     [self setupUI];
 }
 
@@ -32,13 +25,6 @@ static UIWindow *s_applicationWindow = nil;
     
     self.tableView.tableFooterView = [UIView new];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonTapped:)];
-}
-
-- (void)initEntries {
-    WBWifiListViewController *wifiListViewController = [[WBWifiListViewController alloc] init];
-    WBGPSPickerViewController *gpsPickerViewController = [[WBGPSPickerViewController alloc] init];
-    self.entries = @{ @"GPS 设置": gpsPickerViewController,
-                      @"WIFI 设置": wifiListViewController };
 }
 
 + (void)setApplicationWindow:(UIWindow *)applicationWindow {
@@ -50,17 +36,25 @@ static UIWindow *s_applicationWindow = nil;
 }
 
 - (NSString *)titleForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [[self.entries allKeys] objectAtIndex:indexPath.row];
+    if (indexPath.row == 0) {
+        return @"GPS 设置";
+    } else {
+        return @"WIFI 设置";
+    }
 }
 
 - (UIViewController *)viewControllerToPushForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [[self.entries allValues] objectAtIndex:indexPath.row];
+    if (indexPath.row == 0) {
+        return [WBGPSPickerViewController new];
+    } else {
+        return [WBWifiListViewController new];
+    }
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.entries count];;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

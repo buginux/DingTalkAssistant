@@ -159,8 +159,7 @@
 
 #pragma mark - Modal Presentation and Window Management
 
-- (void)makeKeyAndPresentViewController:(UIViewController *)viewController animated:(BOOL)animated completion:(void (^)(void))completion
-{
+- (void)makeKeyAndPresentViewController:(UIViewController *)viewController animated:(BOOL)animated completion:(void (^)(void))completion {
     // Save the current key window so we can restore it following dismissal.
     self.previousKeyWindow = [[UIApplication sharedApplication] keyWindow];
     
@@ -180,8 +179,7 @@
     [self presentViewController:viewController animated:animated completion:completion];
 }
 
-- (void)resignKeyAndDismissViewControllerAnimated:(BOOL)animated completion:(void (^)(void))completion
-{
+- (void)resignKeyAndDismissViewControllerAnimated:(BOOL)animated completion:(void (^)(void))completion {
     UIWindow *previousKeyWindow = self.previousKeyWindow;
     self.previousKeyWindow = nil;
     [previousKeyWindow makeKeyWindow];
@@ -197,18 +195,8 @@
     [self dismissViewControllerAnimated:animated completion:completion];
 }
 
-- (BOOL)wantsWindowToBecomeKey
-{
+- (BOOL)wantsWindowToBecomeKey {
     return self.previousKeyWindow != nil;
-}
-
-#pragma mark - WBMenuViewDelegate
-
-- (void)menuViewDidTapMenu:(WBMenuView *)menu {
-    
-}
-
-- (void)menuViewDidTapClose:(WBMenuView *)close {
 }
 
 @end
