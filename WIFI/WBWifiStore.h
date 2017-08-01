@@ -11,6 +11,8 @@
 @class WBWifiModel;
 @interface WBWifiStore : NSObject
 
++ (instancetype)sharedStore;
+
 @property (nonatomic, strong) NSMutableArray *currentWifiList;
 @property (nonatomic, strong) NSMutableArray *historyWifiList;
 

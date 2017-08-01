@@ -12,6 +12,9 @@
 @interface WBWifiModel : NSObject 
 
 @property (nonatomic, strong) NSString *interfaceName;
+@property (nonatomic, copy) NSString *BSSID;
+@property (nonatomic, copy) NSData *SSIDData;
+@property (nonatomic, copy) NSString *SSID;
 @property (nonatomic, assign) SCNetworkReachabilityFlags flags;
 
 @property (nonatomic, assign) BOOL selected;

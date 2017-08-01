@@ -23,17 +23,17 @@
     [super viewDidLoad];
     self.title = @"WIFI 设置";
     
+    self.store = [WBWifiStore sharedStore];
     [self.store fetchCurrentWifi];
     [self.store fetchHistoryWifi];
+    for (WBWifiModel *wifi in self.store.historyWifiList) {
+        if (wifi.selected) {
+            self.selectedWifi = wifi;
+        }
+    }
     [self.tableView reloadData];
 }
 
-- (WBWifiStore *)store {
-    if (!_store) {
-        _store = [WBWifiStore new];
-    }
-    return _store;
-}
 
 - (NSString *)titleForSection:(NSInteger)section {
     if (section == 0) {
@@ -60,12 +60,6 @@
         wifi.selected = (wifi == currentWifi);
     }
     
-    [self.tableView reloadData];
-    self.selectedWifi = currentWifi;
-    [self.store hookWifi:self.selectedWifi];
-    [self.store appendHistoryWifi:self.selectedWifi];
-    [self.store saveHistoryWifi];
-    
     if (![self.store wifiHooked]) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"初次设置需重启后才会生效" message:nil preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
@@ -75,6 +69,12 @@
         
         [self presentViewController:alert animated:YES completion:nil];
     }
+    
+    self.selectedWifi = currentWifi;
+    [self.store hookWifi:currentWifi];
+    [self.store appendHistoryWifi:currentWifi];
+    [self.store saveHistoryWifi];
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -130,7 +130,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     WBWifiModel *selectedWifi = [self wifiForRowAtIndexPath:indexPath];
-    if (self.selectedWifi == selectedWifi) {
+    if ([self.selectedWifi isEqual:selectedWifi]) {
         return;
     }
     

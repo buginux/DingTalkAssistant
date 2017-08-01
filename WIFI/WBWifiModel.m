@@ -10,10 +10,6 @@
 
 @interface WBWifiModel () <NSCoding>
 
-@property (nonatomic, copy) NSString *BSSID;
-@property (nonatomic, copy) NSData *SSIDData;
-@property (nonatomic, copy) NSString *SSID;
-
 @end
 
 @implementation WBWifiModel

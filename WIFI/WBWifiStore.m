@@ -16,6 +16,15 @@ static NSString * const kHistoryWifiKey = @"HistoryWifiKey";
 
 @implementation WBWifiStore
 
++ (instancetype)sharedStore {
+    static WBWifiStore *store = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        store = [[[self class] alloc] init];
+    });
+    return store;
+}
+
 - (instancetype)init {
     if (self = [super init]) {
         _currentWifiList = [[NSMutableArray alloc] init];
@@ -102,6 +111,7 @@ static NSString * const kHistoryWifiKey = @"HistoryWifiKey";
     if ([data length] > 0) {
         [[NSUserDefaults standardUserDefaults] setObject:data forKey:kWifiHookedKey];
         [[NSUserDefaults standardUserDefaults] synchronize];
+        [self fetchCurrentWifi];
     }
 }
 
