@@ -13,6 +13,7 @@
 @interface WBWifiListViewController ()
 
 @property (nonatomic, strong) WBWifiStore *store;
+@property (nonatomic, strong) WBWifiModel *selectedWifi;
 
 @end
 
@@ -23,6 +24,7 @@
     self.title = @"WIFI 设置";
     
     [self.store fetchCurrentWifi];
+    [self.store fetchHistoryWifi];
     [self.tableView reloadData];
 }
 
@@ -44,8 +46,34 @@
 - (WBWifiModel *)wifiForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         return self.store.currentWifiList[indexPath.row];
-    } else {
+    } else if (indexPath.section == 1) {
         return self.store.historyWifiList[indexPath.row];
+    }
+    return nil;
+}
+
+- (void)selectWifi:(WBWifiModel *)currentWifi {
+    for (WBWifiModel *wifi in self.store.currentWifiList) {
+        wifi.selected = (wifi == currentWifi);
+    }
+    for (WBWifiModel *wifi in self.store.historyWifiList) {
+        wifi.selected = (wifi == currentWifi);
+    }
+    
+    [self.tableView reloadData];
+    self.selectedWifi = currentWifi;
+    [self.store hookWifi:self.selectedWifi];
+    [self.store appendHistoryWifi:self.selectedWifi];
+    [self.store saveHistoryWifi];
+    
+    if (![self.store wifiHooked]) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"初次设置需重启后才会生效" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+        [alert addAction:[UIAlertAction actionWithTitle:@"重启" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            exit(0);
+        }]];
+        
+        [self presentViewController:alert animated:YES completion:nil];
     }
 }
 
@@ -87,12 +115,37 @@
     
     WBWifiModel *wifi = [self wifiForRowAtIndexPath:indexPath];
     cell.textLabel.text = wifi.wifiName;
+    cell.accessoryType = wifi.selected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return [self titleForSection:section];
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    WBWifiModel *selectedWifi = [self wifiForRowAtIndexPath:indexPath];
+    if (self.selectedWifi == selectedWifi) {
+        return;
+    }
+    
+    NSString *message = [NSString stringWithFormat:@"确定将钉钉的 WIFI 切换为 %@ 吗？", selectedWifi.wifiName];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:message message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    __unsafe_unretained __typeof(self)weakSelf = self;
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [weakSelf selectWifi:selectedWifi];
+    }];
+    [alert addAction:cancelAction];
+    [alert addAction:okAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

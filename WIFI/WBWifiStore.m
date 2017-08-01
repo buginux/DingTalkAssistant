@@ -11,33 +11,21 @@
 #import <SystemConfiguration/CaptiveNetwork.h>
 #import <netdb.h>
 
-@interface WBWifiStore ()
-
-@property (nonatomic, strong) NSMutableArray *internalCurrentWifiList;
-@property (nonatomic, strong) NSMutableArray *internalHistoryWifiList;
-
-@end
+static NSString * const kWifiHookedKey = @"WifiHookedKey";
+static NSString * const kHistoryWifiKey = @"HistoryWifiKey";
 
 @implementation WBWifiStore
 
 - (instancetype)init {
     if (self = [super init]) {
-        _internalCurrentWifiList = [NSMutableArray array];
-        _internalHistoryWifiList = [NSMutableArray array];
+        _currentWifiList = [[NSMutableArray alloc] init];
+        _historyWifiList = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
-- (NSArray *)currentWifiList {
-    return [self.internalCurrentWifiList copy];
-}
-
-- (NSArray *)historyWifiList {
-    return [self.internalHistoryWifiList copy];
-}
-
 - (void)fetchCurrentWifi {
-    [self.internalCurrentWifiList removeAllObjects];
+    [self.currentWifiList removeAllObjects];
     
     CFArrayRef arrayRef = CNCopySupportedInterfaces();
     NSArray *interfaces = (__bridge NSArray *)(arrayRef);
@@ -51,8 +39,36 @@
         if (dictionary) {
             WBWifiModel *wifi = [[WBWifiModel alloc] initWithInterfaceName:interfaceName dictionary:dictionary];
             wifi.flags = [self fetchCurrentNetworkStatus];
-            [self.internalCurrentWifiList addObject:wifi];
+            [self.currentWifiList addObject:wifi];
         }
+    }
+}
+
+- (void)fetchHistoryWifi {
+    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:kHistoryWifiKey];
+    
+    if ([data length] > 0) {
+        NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        
+        if ([array count] > 0) {
+            NSMutableArray *copyArray = [[NSMutableArray alloc] initWithArray:array];
+            self.historyWifiList = copyArray;
+        }
+    }
+}
+
+- (void)appendHistoryWifi:(WBWifiModel *)wifi {
+    if (![self.historyWifiList containsObject:wifi]) {
+        [self.historyWifiList addObject:wifi];
+    }
+}
+
+- (void)saveHistoryWifi {
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.historyWifiList];
+    
+    if (data) {
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:kHistoryWifiKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }
 
@@ -74,6 +90,30 @@
     }
     
     return flags;
+}
+
+- (void)hookWifi:(WBWifiModel *)wifi {
+    if (!wifi) {
+        return;
+    }
+    
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:wifi];
+    
+    if ([data length] > 0) {
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:kWifiHookedKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
+- (WBWifiModel *)wifiHooked {
+    WBWifiModel *wifi = nil;
+    
+    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:kWifiHookedKey];
+    if ([data length] > 0) {
+        wifi = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    }
+    
+    return wifi;
 }
 
 @end

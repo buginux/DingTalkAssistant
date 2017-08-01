@@ -11,9 +11,15 @@
 @class WBWifiModel;
 @interface WBWifiStore : NSObject
 
-@property (nonatomic, strong, readonly) NSArray *currentWifiList;
-@property (nonatomic, strong, readonly) NSArray *historyWifiList;
+@property (nonatomic, strong) NSMutableArray *currentWifiList;
+@property (nonatomic, strong) NSMutableArray *historyWifiList;
 
 - (void)fetchCurrentWifi;
+- (void)fetchHistoryWifi;
+- (void)appendHistoryWifi:(WBWifiModel *)wifi;
+- (void)saveHistoryWifi;
+
+- (void)hookWifi:(WBWifiModel *)wifi;
+- (WBWifiModel *)wifiHooked;
 
 @end

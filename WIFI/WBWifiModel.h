@@ -9,12 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <SystemConfiguration/SCNetworkReachability.h>
 
-@interface WBWifiModel : NSObject
+@interface WBWifiModel : NSObject 
 
 @property (nonatomic, strong) NSString *interfaceName;
 @property (nonatomic, assign) SCNetworkReachabilityFlags flags;
 
-@property (nonatomic, strong) NSString *wifiName;
+@property (nonatomic, assign) BOOL selected;
+@property (nonatomic, strong, readonly) NSString *wifiName;
 
 - (instancetype)initWithInterfaceName:(NSString *)ifname dictionary:(NSDictionary *)dictionary;
 
